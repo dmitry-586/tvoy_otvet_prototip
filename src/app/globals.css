@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #f2f4f6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+:root {
+  --feedback-layout-left-width: clamp(17.5rem, -50rem + 90vw, 28.75rem);
+  --shadow-custom: 0px 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+.scroll-container {
+  scrollbar-width: auto;
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: 14px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: #f6f6f9; /* Цвет фона трека */
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #eaeaef; /* Цвет скроллбара */
+  border-radius: 100px;
+  border: 4px solid #f6f6f9;
+}
+
+.scroll-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 8px; /* Ширина скроллбара */
+  background: #f6f6f9; /* Цвет фона трека */
+  z-index: -1; /* Поместите его под содержимым */
+}
+
+.lds-ripple,
+.lds-ripple div {
+  box-sizing: border-box;
+}
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  top: 150px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid currentColor;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 8px;
+    height: 8px;
+    opacity: 0;
+  }
+  4.9% {
+    top: 36px;
+    left: 36px;
+    width: 8px;
+    height: 8px;
+    opacity: 0;
+  }
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 8px;
+    height: 8px;
+    opacity: 1;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+  }
+}
+
+/* select-wrapper */
+.select-wrapper select {
+  background: #f5f6f7 no-repeat;
+  appearance: none;
+  padding-right: 10px;
+  background-image: url("/dashboard/CaretDown.svg");
+  background-position: right 10px center;
+  background-size: 16px 16px;
+}
+
+/* headerInputs */
+.input-container {
+  position: relative;
+}
+
+.image-placeholder {
+  background-size: 20px; /* Размер изображения */
+  background-repeat: no-repeat;
+}
+
+.image-placeholder:focus {
+  outline: none; /* Убираем обводку при фокусе */
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(-10px); /* Начальная позиция немного выше */
+  animation: fadeIn 0.5s forwards; /* Анимация появления */
+}
+
+.fade-out {
+  opacity: 1;
+  animation: fadeOut 0.5s forwards; /* Анимация исчезновения */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Конечная позиция */
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateY(-10px); /* Конечная позиция немного выше */
+  }
+}
+
+.border-left-half {
+  position: relative;
+}
+
+.border-left-half::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 2px;
+  background-color: transparent;
+  height: 50%;
+}
+
+.border-left-half:hover::before {
+  background-color: #7c3ff9;
+}
+
+/* rangepicker mobile */
+@media (max-width: 700px) {
+  .ant-picker-panel:last-child .ant-picker-date-panel {
+    display: none !important;
+  }
+
+  .ant-picker-panel:first-child
+    .ant-picker-date-panel
+    .ant-picker-header-next-btn,
+  .ant-picker-panel:first-child
+    .ant-picker-date-panel
+    .ant-picker-header-super-next-btn {
+    visibility: initial !important;
+  }
+
+  .ant-picker-panel.ant-picker-range-wrapper {
+    min-width: 288px !important;
+  }
+
+  .ant-picker-presets {
+    display: none !important;
+  }
+}

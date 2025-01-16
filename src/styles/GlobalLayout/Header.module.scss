@@ -1,0 +1,97 @@
+.headerTopWrapper {
+  @apply flex bg-white h-[72px] justify-between items-center py-4 px-10 z-30 sticky top-0 ml-2;
+  @media (max-width: 950px) {
+    padding: 0 20px;
+    margin: 0;
+    justify-content: start;
+  }
+}
+
+.headerLogo {
+  @apply hidden gap-2 items-center;
+  @media (max-width: 950px) {
+    display: flex;
+    order: 2;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.burgerIcon {
+  width: 30px;
+  height: 3px;
+  background-color: #666687;
+  border-radius: 0 20px 20px 0;
+  position: relative;
+  transition: all 0.3s ease;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: #666687;
+    width: 20px;
+    height: 3px;
+    border-radius: 0 20px 20px 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &::before {
+    top: -6px;
+  }
+
+  &::after {
+    top: 6px;
+    right: 0;
+  }
+
+  &.active {
+    background-color: transparent;
+
+    &::before,
+    &::after {
+      width: 30px;
+      top: 0;
+      border-radius: 0;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.tokenIcon {
+  @apply bg-[#DCCBFD] rounded-full px-[10px] py-2 flex gap-[10px] items-center ml-auto mr-4;
+
+  @media (max-width: 950px) {
+    margin-left: 24px;
+    order: 1;
+  }
+  @media (max-width: 480px) {
+    flex-direction: column;
+    gap: 0;
+    padding-bottom: 0;
+    background-color: #f9fbff;
+    padding-top: 6px;
+    padding-bottom: 4px;
+    gap: 2px;
+  }
+
+  &_p {
+    @apply flex text-[#4A4A6A] text-xs font-semibold;
+    @media (max-width: 480px) {
+      font-size: 8px;
+      line-height: 100%;
+    }
+  }
+}
+
+.profileLink {
+  @apply justify-between w-full rounded-full shadow-custom py-2 px-3 items-center;
+}

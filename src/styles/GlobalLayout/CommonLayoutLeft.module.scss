@@ -1,0 +1,29 @@
+.CommonLayoutLeftWrapper {
+  --sidebar-expanded-width: 230px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #eff0f6;
+  @media (max-width: 1200px) {
+    --sidebar-expanded-width: 200px;
+  }
+  @media (max-width: 950px) {
+    display: none;
+  }
+}
+
+.CommonLayoutLeft {
+  @apply relative h-[72px] flex items-center bg-white;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 72px;
+    background: white;
+    right: -10px;
+    border-left: 1px solid #eff0f6;
+  }
+}
+
+.NavMenu {
+  @apply flex-1 gap-2 border border-[#EFF0F6] bg-white flex flex-col py-3 px-[10px];
+}

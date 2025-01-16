@@ -1,0 +1,100 @@
+.FeedbackLayoutLeftWrapper {
+  @apply fixed h-screen-minus-72 overflow-y-auto;
+  width: var(--feedback-layout-left-width);
+  background-color: #f6f6f9;
+
+  @media (max-width: 750px) {
+    width: 100%;
+  }
+}
+
+.feedbackChatWrapper {
+  @apply bg-[#EAEAEF] flex-1 flex flex-col justify-between h-screen-minus-72;
+  margin-left: var(--feedback-layout-left-width);
+
+  @media (max-width: 750px) {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  &_headerAddress {
+    @apply text-[#666687] overflow-hidden whitespace-nowrap overflow-ellipsis;
+    max-width: clamp(20.625rem, -93.125rem + 130vw, 28.75rem);
+    @media (max-width: 1150px) {
+      max-width: clamp(10.625rem, -35.089rem + 76.19vw, 20.625rem);
+    }
+    @media (max-width: 950px) {
+      max-width: clamp(10rem, -36.875rem + 100vw, 19.375rem);
+    }
+    @media (max-width: 750px) {
+      max-width: clamp(10rem, -24.375rem + 100vw, 22.5rem);
+    }
+    @media (max-width: 550px) {
+      max-width: clamp(14.375rem, -1.02rem + 68.42vw, 22.5rem);
+    }
+  }
+}
+
+.FeedbackInfoWrapper {
+  @apply bg-[#EAEAEF] flex-1 h-screen-minus-72 flex flex-col justify-between;
+  margin-left: var(--feedback-layout-left-width);
+
+  @media (max-width: 750px) {
+    flex: auto;
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.FeedbackFilterWrapper {
+  @apply py-[14px] flex flex-col items-center px-5;
+
+  @media (max-width: 1350px) {
+    padding: 14px 10px;
+  }
+  .RangePickerWrapper {
+    @apply px-5 py-4 border rounded-[20px] flex gap-[10px] mt-5 shadow-custom w-full;
+
+    @media (max-width: 1200px) {
+      padding: 16px 12px;
+    }
+  }
+  .RangePickerImage {
+    @apply min-w-[54px] h-[48px] flex items-center justify-center rounded-[15px] bg-[#F2F4F6];
+
+    @media (max-width: 1200px) {
+      min-width: 44px;
+      min-height: 38px;
+    }
+  }
+}
+
+.selectWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.modalSelect {
+  @apply border h-[50px] rounded-full px-4 focus:outline-none appearance-none;
+  user-select: none;
+}
+
+.feedbackMessageWrapper {
+  @apply flex gap-[10px] items-start;
+  max-width: clamp(25rem, 12rem + 26vw, 29.875rem);
+
+  .feedbackMessageText {
+    @apply text-[#212134] break-words text-left;
+    font-size: clamp(0.75rem, 0.5rem + 0.8vw, 0.875rem);
+
+    @media (max-width: 750px) {
+      max-width: clamp(15.625rem, 8.413rem + 32.05vw, 23.438rem);
+    }
+  }
+}
+
+.hidden {
+  @media (max-width: 750px) {
+    display: none;
+  }
+}
