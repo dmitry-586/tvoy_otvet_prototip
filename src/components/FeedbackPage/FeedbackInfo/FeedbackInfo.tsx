@@ -44,7 +44,9 @@ const FeedbackInfo: React.FC<FeedbackChatProps> = ({ handleClick }) => {
             style={{ width: "106px", height: "106px" }}
           />
           <div className="flex flex-col gap-3">
-            <p className="leading-none max-[500px]:text-sm">HELPER (Большая Покровская ул., 58, Нижний Новгород)</p>
+            <p className="leading-none max-[500px]:text-sm">
+              HELPER (Большая Покровская ул., 58, Нижний Новгород)
+            </p>
             <button className="flex-1 w-[200px] bg-white rounded-[20px] flex items-center justify-center gap-2">
               <Image
                 src="/feedback/forLink.svg"

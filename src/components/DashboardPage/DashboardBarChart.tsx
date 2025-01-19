@@ -21,10 +21,10 @@ function DashboardBarChart({ title, dataKey, className }: GridItemProps) {
       <div className="w-full select-wrapper flex items-center justify-between border-b border-[#F5F6F7] pb-4">
         <h3>{title}</h3>
       </div>
-      <ResponsiveContainer width="100%" height="100%">
+      <ResponsiveContainer width="100%" height={209}>
         <BarChart
-          width={359}
-          height={272}
+          width={484}
+          height={209}
           data={salesData}
           barSize={10}
           margin={{

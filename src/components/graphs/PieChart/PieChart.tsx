@@ -23,8 +23,8 @@ export default function PieChartItem({
       </div>
       <div className={`flex mt-5 gap-10 items-center ${className}`}>
         <div style={{ width: "155px", height: "155px" }}>
-          <ResponsiveContainer>
-            <PieChart>
+          <ResponsiveContainer width={155} height="100%">
+            <PieChart width={155} height={155}>
               <Pie
                 data={data}
                 innerRadius={55}

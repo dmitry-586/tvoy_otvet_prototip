@@ -10,7 +10,7 @@ type MoneyKey = "money" | "money2";
 
 export default function AreaDiagram({ title, dataKey }: GridItemProps) {
   return (
-    <div className="flex-1 flex flex-col p-5 bg-white rounded-[20px] min-w-[150px] min-h-[155px] h-[155px] relative shadow-custom">
+    <div className="flex-1 flex flex-col p-5 bg-white rounded-[20px] min-w-[150px] h-[155px] relative shadow-custom">
       <h3 className="text-sm text-[#000000B2]">{title}</h3>
       <p className="mt-3 font-bold text-2xl">
         {SumMoney({ moneyKey: dataKey as MoneyKey })}
@@ -39,7 +39,7 @@ export default function AreaDiagram({ title, dataKey }: GridItemProps) {
         height="100%"
         style={{ marginTop: "20px" }}
       >
-        <AreaChart width={170} height={155} data={salesData}>
+        <AreaChart data={salesData}>
           <Tooltip content={<CustomTooltip />} />
           <Area
             dataKey={dataKey}

@@ -22,8 +22,9 @@ export default function Home() {
           <Image
             src="/dashboard/Date_range_fill.svg"
             alt="date"
-            width={16}
-            height={16}
+            width={0}
+            height={0}
+            style={{ width: "auto", height: "auto" }}
           />
           <p>Дата</p>
         </div>
