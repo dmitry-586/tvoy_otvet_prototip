@@ -98,3 +98,42 @@
     display: none;
   }
 }
+
+.commonInfoBlockClass {
+  min-width: 166px;
+  max-width: 263px;
+
+  @media (max-width: 1280px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 900px) {
+    display: flex;
+    flex-direction: row;
+    max-width: 304px;
+    min-width: max-content;
+    gap: 20px;
+    align-items: center;
+  }
+
+  @media (max-width: 750px) {
+    max-width: 263px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  @media (max-width: 610px) {
+    flex-direction: row;
+    gap: 20px;
+    max-width: 304px;
+    min-width: max-content;
+    align-items: center;
+  }
+
+  @media (max-width: 400px) {
+    max-width: 100%;
+    gap: 10px;
+    flex-direction: column;
+  }
+}

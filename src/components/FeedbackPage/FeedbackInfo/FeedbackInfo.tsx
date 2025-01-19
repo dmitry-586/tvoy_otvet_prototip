@@ -10,8 +10,6 @@ const FeedbackInfo: React.FC<FeedbackChatProps> = ({ handleClick }) => {
 
   const renderContent = () => {
     switch (activeTab) {
-      // case "Материалы беседы":
-      //   return <MaterialsContent />;
       case "Описание":
         return <LocationContent />;
       case "Статистика":
@@ -21,7 +19,7 @@ const FeedbackInfo: React.FC<FeedbackChatProps> = ({ handleClick }) => {
   };
   return (
     <div className={styles.FeedbackInfoWrapper}>
-      <div className="h-20 py-5 w-full bg-inherit border-b border-[#C0C0CF] flex items-center px-10">
+      <div className="h-20 py-5 w-full bg-inherit border-b border-[#C0C0CF] flex items-center px-10 max-[950px]:px-5 max-[400px]:px-[10px]">
         <button
           onClick={handleClick}
           className="text-[14px] flex gap-2 items-center"
@@ -36,39 +34,31 @@ const FeedbackInfo: React.FC<FeedbackChatProps> = ({ handleClick }) => {
         </button>
         <p className="ml-auto mr-[50%] translate-x-[50%]">Информация</p>
       </div>
-      <div className="flex-1 flex flex-col items-center w-full py-5 bg-[#EAEAEF] overflow-auto">
-        <div className="flex gap-5 w-full px-10">
+      <div className="flex-1 flex flex-col items-center w-full py-5 bg-[#EAEAEF] overflow-auto max-w-[930px]">
+        <div className="flex gap-5 w-full px-10 max-[950px]:px-5 max-[400px]:px-[10px]">
           <Image
             src="/feedback/image.png"
             alt="image"
             width={106}
             height={106}
+            style={{ width: "106px", height: "106px" }}
           />
           <div className="flex flex-col gap-3">
-            <p>HELPER (Большая Покровская ул., 58, Нижний Новгород)</p>
-            <button className="w-[200px] h-[70px] bg-white rounded-[20px] flex items-center justify-center gap-2">
+            <p className="leading-none max-[500px]:text-sm">HELPER (Большая Покровская ул., 58, Нижний Новгород)</p>
+            <button className="flex-1 w-[200px] bg-white rounded-[20px] flex items-center justify-center gap-2">
               <Image
                 src="/feedback/forLink.svg"
                 alt="forLink"
                 width={22}
                 height={22}
+                style={{ width: "auto", height: "auto" }}
               />
               <p>Перейти</p>
             </button>
           </div>
         </div>
-        <div className="w-full flex flex-col mt-[34px] px-10">
+        <div className="w-full flex flex-col mt-[34px] px-10 max-[950px]:px-5 max-[400px]:px-[10px]">
           <div className="w-full bg-white rounded-t-[20px] h-[50px] flex justify-center gap-[74px]">
-            {/* <button
-              onClick={() => setActiveTab("Материалы беседы")}
-              className={
-                activeTab === "Материалы беседы"
-                  ? "border-b-[3px] border-t-[3px] border-t-transparent border-[#7C3FF9] duration-300"
-                  : "border-y-[3px] border-transparent"
-              }
-            >
-              Материалы беседы
-            </button> */}
             <button
               onClick={() => setActiveTab("Описание")}
               className={

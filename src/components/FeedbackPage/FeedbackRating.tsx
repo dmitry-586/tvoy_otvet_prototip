@@ -4,17 +4,21 @@ import React from "react";
 interface IFeedbackRating {
   ratingCount: string;
   recallCount: string;
+  className?: string;
 }
 
 const FeedbackRating: React.FC<IFeedbackRating> = ({
   ratingCount,
   recallCount,
+  className,
 }) => {
   const stars = [5, 4, 3, 2, 1];
   const rating = 4.4;
 
   return (
-    <div className="w-[284px] leading-none bg-white rounded-[20px] p-5 flex justify-center max-[1150px]:w-full">
+    <div
+      className={`w-[284px] leading-none bg-white rounded-[20px] p-5 flex justify-center ${className}`}
+    >
       <div className="flex flex-col gap-5 w-full">
         <div className="border-b w-full pb-4 border-[#F5F6F7]">
           <h3 className="text-xl">Оценки</h3>
