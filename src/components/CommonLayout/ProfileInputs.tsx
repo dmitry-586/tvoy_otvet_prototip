@@ -38,7 +38,7 @@ const HeaderInputs: React.FC<ProfileFormData> = ({
   }, []);
 
   return (
-    <div className={`flex flex-col gap-[14px] w-[360px] ${classNameWrapper}`}>
+    <div className={`flex flex-col gap-[14px] w-full ${classNameWrapper}`}>
       {inputData.map((input, index) => (
         <div key={index} className="input-container flex flex-col gap-2">
           <p>{input.title}:</p>

@@ -35,7 +35,7 @@ const Services = () => {
   }, []);
 
   return (
-    <div className="p-10 bg-[#f2f4f6] h-screen max-[1200px]:p-5">
+    <div className="p-10 bg-[#f2f4f6] w-full h-screen max-[1200px]:p-5">
       <h2 className="text-[22px] font-semibold">Сервисы</h2>
       <div className={styles.ServicesWrapper}>
         <ServicesTable

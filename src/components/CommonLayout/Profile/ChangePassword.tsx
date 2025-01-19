@@ -10,9 +10,9 @@ const ChangePassword: React.FC<IProfilePages> = ({
 }) => {
   return (
     <m.div
-      initial={{ right: -565 }}
+      initial={{ right: -460 }}
       animate={{
-        right: activeTab ? 0 : -565,
+        right: activeTab ? 0 : -460,
       }}
       transition={{
         duration: 0.2,
@@ -20,7 +20,7 @@ const ChangePassword: React.FC<IProfilePages> = ({
         stiffness: 200,
         damping: 23,
       }}
-      className="w-[565px] h-screen z-40 bg-white absolute top-0 overflow-auto"
+      className="w-[460px] h-screen z-40 bg-white absolute top-0 overflow-auto max-[460px]:w-full"
     >
       <div className="flex justify-between h-[72px] items-center py-6 px-5 border-b sticky top-0 bg-white">
         <p className="text-sm">Смена пароля</p>
@@ -47,7 +47,7 @@ const ChangePassword: React.FC<IProfilePages> = ({
         />
         <p className="text-[#212134] text-xs">Назад</p>
       </button>
-      <div className="flex flex-wrap p-5 gap-[14px]">
+      <div className="flex flex-wrap p-5 gap-[14px] max-w-[400px]">
         <ProfileInputs
           prefix="password"
           type="password"
@@ -55,10 +55,9 @@ const ChangePassword: React.FC<IProfilePages> = ({
           placeholders={["Password", "Password"]}
           placeholdersImage={["/path/to/image.svg"]}
           className="pl-4"
-          classNameWrapper="w-full"
         />
       </div>
-      <div className="flex px-5 justify-center">
+      <div className="flex px-5">
         <button
           type="submit"
           className="flex gap-2 w-[187px] h-[40px] bg-[#915DFA] rounded-[20px] justify-center items-center text-white text-sm mt-[10px] mb-[30px]"

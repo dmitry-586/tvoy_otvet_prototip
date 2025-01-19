@@ -1,0 +1,16 @@
+.cardWrapper {
+  @apply bg-white flex flex-col rounded-[20px] shadow-custom p-5 w-[330px] h-min gap-5;
+
+  @media (max-width: 1400px) {
+    width: clamp(15.625rem, -2.708rem + 26.67vw, 20.625rem);
+  }
+
+  @media (max-width: 900px) {
+    width: clamp(12.5rem, 1.563rem + 25vw, 15.625rem);
+    gap: 10px;
+  }
+
+  @media (max-width: 700px) {
+    width: 100%;
+  }
+}

@@ -26,7 +26,7 @@ export default function RootLayout({
             <CommonLayoutLeft />
             <section className="flex-1 inline-flex flex-col overflow-auto ">
               <HeaderTop />
-              <main className="flex-1 overflow-auto flex max-[730px]:justify-center">
+              <main className="flex-1 overflow-auto flex">
                 {children}
               </main>
             </section>

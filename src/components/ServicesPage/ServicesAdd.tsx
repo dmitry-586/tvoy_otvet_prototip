@@ -8,12 +8,7 @@ import { ServicesAddProps } from "@/interfaces/interfaces";
 import React from "react";
 import ServicesForm from "./ServicesForm";
 
-const ServicesAdd: React.FC<ServicesAddProps> = ({
-  services,
-  setServices,
-  loading,
-  error,
-}) => {
+const ServicesAdd: React.FC<ServicesAddProps> = ({ services, setServices }) => {
   const { spinning, percent, showLoader } = useLoader();
 
   const [selectedService, setSelectedService] = useState("Wildberries");
@@ -57,27 +52,27 @@ const ServicesAdd: React.FC<ServicesAddProps> = ({
     }
   };
 
-  const renderLoadingOrError = () => {
-    if (loading) {
-      return <p>Загрузка...</p>;
-    }
-    if (error) {
-      return <p>{error}</p>;
-    }
-    if (!services || services.length === 0) {
-      return <p>Данные сервисов не загружены</p>;
-    }
-    return null;
-  };
+  // const renderLoadingOrError = () => {
+  //   if (loading) {
+  //     return <p>Загрузка...</p>;
+  //   }
+  //   if (error) {
+  //     return <p>{error}</p>;
+  //   }
+  //   if (!services || services.length === 0) {
+  //     return <p>Данные сервисов не загружены</p>;
+  //   }
+  //   return null;
+  // };
 
-  const loadingOrErrorContent = renderLoadingOrError();
-  if (loadingOrErrorContent) {
-    return (
-      <div className="w-[420px] flex p-5 min-h-[480px] bg-white rounded-[20px] justify-center text-[#32324D] max-[1000px]:hidden">
-        {loadingOrErrorContent}
-      </div>
-    );
-  }
+  // const loadingOrErrorContent = renderLoadingOrError();
+  // if (loadingOrErrorContent) {
+  //   return (
+  //     <div className="w-[420px] flex p-5 min-h-[480px] bg-white rounded-[20px] justify-center text-[#32324D] max-[1000px]:hidden">
+  //       {loadingOrErrorContent}
+  //     </div>
+  //   );
+  // }
 
   return (
     <>

@@ -2,6 +2,7 @@
 
 import TableRow from "@/components/PaymentsPage/TableRow";
 import { CardProps } from "@/interfaces/interfaces";
+import styles from "../../styles/PaymentsPage/PaymentsPage.module.scss";
 
 const Card: React.FC<CardProps> = ({
   title,
@@ -9,14 +10,23 @@ const Card: React.FC<CardProps> = ({
   buttonText,
   onButtonClick,
 }) => (
-  <div className="bg-white flex flex-col rounded-[20px] shadow-custom p-5 w-[330px] h-min gap-5">
-    <div className="flex justify-between gap-5">
+  <div className={styles.cardWrapper}>
+    <div className="flex justify-between gap-5 max-[500px]:text-sm">
       <h4>{title}</h4>
-      <button className="text-[#7C3FF9]" onClick={onButtonClick}>
+      <button
+        className="text-[#7C3FF9] max-[1290px]:hidden max-[700px]:flex"
+        onClick={onButtonClick}
+      >
         {buttonText}
       </button>
     </div>
-    <p className="text-2xl">{value}</p>
+    <p className="text-2xl max-[500px]:text-xl">{value}</p>
+    <button
+      className="text-[#7C3FF9] text-start hidden max-[1290px]:flex max-[700px]:hidden"
+      onClick={onButtonClick}
+    >
+      {buttonText}
+    </button>
   </div>
 );
 
@@ -25,8 +35,8 @@ export default function Payments() {
   const amount2 = 1230;
 
   return (
-    <div className="p-10 flex flex-col gap-10">
-      <div className="flex gap-10">
+    <div className="p-10 h-max flex flex-col gap-10 max-[900px]:gap-5 max-[730px]:p-5 max-[700px]:w-full">
+      <div className="grid grid-cols-3 gap-10 max-[900px]:gap-5 max-[700px]:grid-cols-1">
         <Card
           title="Текущий тариф"
           value="Бесплатный"
@@ -46,12 +56,11 @@ export default function Payments() {
           onButtonClick={() => console.log("Изменить количество токенов")}
         />
       </div>
-      <div className="bg-white flex flex-col rounded-[20px] shadow-custom p-5 gap-5 min-h-[400px]">
+      <div className="bg-white flex flex-col rounded-[20px] shadow-custom p-5 gap-5 min-h-[400px] min-w-[830px] max-[900px]:min-w-max">
         <h4 className="text-lg">История операций</h4>
         <div>
-          <div className="grid grid-cols-[0.7fr,0.7fr,0.6fr,0.8fr] border-y py-3">
+          <div className="grid grid-cols-[0.5fr,0.8fr,1fr] border-y py-3 max-[900px]:grid-cols-[0.6fr,1fr,0.8fr] max-[500px]:grid-cols-[1fr,0.9fr,1fr] max-[450px]:text-sm">
             <p>Тип</p>
-            <p>Описание</p>
             <p className="text-center">Сумма (руб)</p>
             <p className="text-center">Дата</p>
           </div>

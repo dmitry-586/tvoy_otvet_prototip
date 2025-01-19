@@ -16,7 +16,7 @@ export default function Home() {
   const { RangePicker } = DatePicker;
 
   return (
-    <section className="flex flex-col w-full h-full px-8 py-6 max-[1000px]:px-6 max-[1000px]:py-4 max-[730px]:w-auto max-[500px]:w-full max-[500px]:max-w-[390px]">
+    <section className="flex flex-col w-full h-full px-8 py-6 max-[1000px]:px-6 max-[1000px]:py-4 max-[730px]:w-auto max-[730px]:mx-auto max-[500px]:w-full max-[500px]:max-w-[390px]">
       <div className="flex flex-col gap-1 max-w-[270px]">
         <div className="flex gap-1">
           <Image
