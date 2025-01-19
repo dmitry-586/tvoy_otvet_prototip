@@ -10,7 +10,7 @@ const RatingContent = () => {
           title="Темы негатива"
           data={data}
           className="flex-col max-[1430px]:flex-row max-[1150px]:flex-col"
-          wrapperStyles="max-w-[420px] max-h-none min-w-[310px]"
+          wrapperStyles="max-w-[420px] max-h-none !min-w-[310px]"
           headerStyles="py-0 pb-4 text-xl"
         />
         <div className="flex flex-col gap-2 max-[1430px]:flex-row max-[870px]:flex-col max-[750px]:flex-row max-[600px]:flex-col">
