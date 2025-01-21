@@ -56,20 +56,25 @@ const AuthPage: React.FC<IAuthPageProps> = ({
   };
 
   return (
-    <section className="w-screen h-screen flex justify-center items-center bg-white">
-      <div className="w-[550px]">
+    <section className="w-screen h-screen flex justify-center items-center bg-white px-10 max-[450px]:px-5">
+      <div className="w-[550px] max-[900px]:w-[450px] max-[500px]:w-full">
         <div className="flex flex-col items-center">
-          <h2 className="text-[40px] font-bold leading-none">{title}</h2>
-          <p className="mt-7">
+          <h2 className="text-[40px] font-bold leading-none max-[900px]:text-[30px] max-[500px]:text-[24px]">
+            {title}
+          </h2>
+          <p className="mt-7 max-[900px]:mt-5 max-[500px]:text-[14px] text-center">
             {switchTitle}
-            <button onClick={onToggle} className="text-[#7C3FF9] ml-2">
+            <button
+              onClick={onToggle}
+              className="text-[#7C3FF9] ml-2 text-base"
+            >
               {switchText}
             </button>
           </p>
         </div>
         <form
           onSubmit={handleLogin}
-          className="flex flex-col gap-6 mt-[50px] text-[22px] font-bold"
+          className="flex flex-col gap-6 mt-[50px] text-[22px] font-bold max-[900px]:mt-8 max-[500px]:mt-5"
         >
           <div className={styles.input_container}>
             <input
@@ -116,7 +121,7 @@ const AuthPage: React.FC<IAuthPageProps> = ({
               </label>
             </div>
             {isLoginPage && (
-              <button className="text-[18px] font-normal transition-colors duration-200 hover:text-[#7C3FF9]">
+              <button className="text-[18px] font-normal transition-colors duration-200 hover:text-[#7C3FF9] max-[900px]:text-base max-[500px]:text-sm">
                 Забыли пароль?
               </button>
             )}

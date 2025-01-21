@@ -26,6 +26,10 @@
     &:not(:placeholder-shown) {
       z-index: 10;
     }
+
+    @media (max-width: 900px) {
+      height: 40px;
+    }
   }
 
   label {
@@ -40,6 +44,10 @@
     transition: top 0.2s ease, font-size 0.2s ease;
     color: #4a4a6a;
     z-index: 10;
+
+    @media (max-width: 900px) {
+      font-size: 18px;
+    }
 
     &.active {
       top: 0;
@@ -77,8 +85,12 @@
 .checkbox {
   display: flex;
   position: relative;
-  height: 24px;
+  height: 26px;
   align-items: center;
+
+  @media (max-width: 500px) {
+    height: 21px;
+  }
 
   & input {
     -webkit-appearance: none;
@@ -97,6 +109,15 @@
     font-weight: 400;
     line-height: 100%;
 
+    @media (max-width: 900px) {
+      font-size: 16px;
+    }
+
+    @media (max-width: 500px) {
+      padding-left: 28px;
+      font-size: 14px;
+    }
+
     &::before {
       content: "";
       display: block;
@@ -109,6 +130,11 @@
       top: 0;
       left: 0;
       z-index: 10;
+
+      @media (max-width: 500px) {
+        width: 20px;
+        height: 20px;
+      }
     }
 
     &::after {
@@ -124,6 +150,13 @@
       z-index: 15;
       opacity: 0;
       transition: opacity 0.1s ease;
+
+      @media (max-width: 500px) {
+        width: 20px;
+        height: 20px;
+        top: 4px;
+        left: 3px;
+      }
     }
   }
 
@@ -137,5 +170,15 @@
   transition: all 0.15s ease-in-out;
   &:hover {
     scale: 1.02;
+  }
+
+  @media (max-width: 900px) {
+    font-size: 18px;
+    height: 50px;
+    margin-top: 16px;
+  }
+
+  @media (max-width: 500px) {
+    margin-top: 8px;
   }
 }

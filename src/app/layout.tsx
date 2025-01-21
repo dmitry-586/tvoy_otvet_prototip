@@ -21,12 +21,12 @@ export default function RootLayout({
   return (
     <html lang="ru" className={publicSans.className}>
       <LazyMotion features={domAnimation}>
-        <body className="flex h-screen overflow-hidden">
+        <body className="flex h-screen">
           <AuthProvider>
             <CommonLayoutLeft />
-            <section className="flex-1 inline-flex flex-col overflow-auto ">
+            <section className="flex-1 inline-flex flex-col overflow-auto">
               <HeaderTop />
-              <main className="flex-1 overflow-auto flex">
+              <main className="flex-1 overflow-auto flex max-[950px]:pt-[72px]">
                 {children}
               </main>
             </section>

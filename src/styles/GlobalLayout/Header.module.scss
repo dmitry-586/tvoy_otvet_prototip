@@ -1,6 +1,8 @@
 .headerTopWrapper {
   @apply flex bg-white h-[72px] justify-between items-center py-4 px-10 z-30 sticky top-0 ml-2;
   @media (max-width: 950px) {
+    position: fixed;
+    width: 100%;
     padding: 0 20px;
     margin: 0;
     justify-content: start;
