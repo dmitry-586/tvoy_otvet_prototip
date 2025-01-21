@@ -51,7 +51,7 @@ const MenuData = () => {
     {
       src: "/training/training2.svg",
       href: "/TrainingPage",
-      title: "Обучение",
+      title: "База знаний",
       id: 9,
     },
   ];

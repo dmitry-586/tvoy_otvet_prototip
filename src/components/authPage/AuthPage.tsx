@@ -124,6 +124,12 @@ const AuthPage: React.FC<IAuthPageProps> = ({
           <button type="submit" className={styles.logButton} disabled={loading}>
             {loading ? "Загрузка..." : buttonText}
           </button>
+          <button
+            onClick={onLogin}
+            className="text-[18px] font-normal transition-colors duration-200 hover:text-[#7C3FF9]"
+          >
+            Войти принудительно
+          </button>
           {error && <p className="text-red-500 mt-4">{error}</p>}
         </form>
       </div>

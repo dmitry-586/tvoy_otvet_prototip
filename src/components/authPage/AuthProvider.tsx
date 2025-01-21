@@ -12,7 +12,7 @@ const AuthContext = createContext({
 export const useAuth = () => useContext(AuthContext);
 
 const AuthProvider = ({ children }: { children: React.ReactNode }) => {
-  const [isAuthenticated, setIsAuthenticated] = useState(true);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isLoginPage, setIsLoginPage] = useState(true);
 
   const login = () => {

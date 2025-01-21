@@ -6,7 +6,6 @@ import ServicesAdd from "@/components/ServicesPage/ServicesAdd";
 import ServicesTable from "@/components/ServicesPage/ServicesTable";
 import styles from "../../styles/ServicesPage/Services.module.scss";
 import axios from "axios";
-import API_URL from "../../../config";
 
 const Services = () => {
   const [services, setServices] = useState<ServicesProps[]>([]);
@@ -16,7 +15,7 @@ const Services = () => {
   const fetchServices = async () => {
     setLoading(true);
     try {
-      const response = await axios.get<ServicesProps[]>(`${API_URL}/services`);
+      const response = await axios.get<ServicesProps[]>(`/api/services`);
       setServices(response.data);
     } catch (err) {
       console.error("Ошибка при получении данных:", err);
@@ -35,7 +34,7 @@ const Services = () => {
   }, []);
 
   return (
-    <div className="p-10 bg-[#f2f4f6] w-full h-screen max-[1200px]:p-5">
+    <div className="p-10 bg-[#f2f4f6] w-full h-max max-[1200px]:p-5">
       <h2 className="text-[22px] font-semibold">Сервисы</h2>
       <div className={styles.ServicesWrapper}>
         <ServicesTable

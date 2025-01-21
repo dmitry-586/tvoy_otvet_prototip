@@ -171,9 +171,16 @@ export interface CardProps {
 }
 
 // src/components/PaymentsPage/TableRow.tsx
-export interface TableRowProps {
-  type: string;
+export interface TableRowPaymentsProps {
+  type?: string;
   description: string;
   amount: number;
   date: string;
 }
+
+export type TableRowTrainingProps = Pick<
+  TableRowPaymentsProps,
+  "description" | "date"
+> & {
+  title: string;
+};

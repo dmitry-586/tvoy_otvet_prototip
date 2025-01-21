@@ -9,7 +9,7 @@ export default function Dashboard() {
   const [isDistribution, setIsDistribution] = useState<boolean>(true);
 
   return (
-    <div className="mt-4 flex gap-3 pb-5">
+    <div className="mt-4 flex gap-3">
       <section className={styles.requestsNumberWrapper}>
         <div className="flex flex-col max-w-[532px] gap-3 max-[1020px]:max-w-none max-[500px]:min-w-[312px] max-[500px]:w-full">
           <InfoSection

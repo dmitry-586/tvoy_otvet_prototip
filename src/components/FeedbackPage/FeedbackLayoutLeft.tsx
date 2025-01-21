@@ -7,7 +7,7 @@ const FeedbackLayoutLeft: React.FC<IFeedbackLayoutLeft> = ({
   handleClick,
   isCommunication,
 }) => {
-  const feedbackCount = 1;
+  const feedbackCount = 15;
 
   return (
     <div

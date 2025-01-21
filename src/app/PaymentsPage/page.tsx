@@ -1,8 +1,8 @@
 "use client";
 
-import TableRow from "@/components/PaymentsPage/TableRow";
 import { CardProps } from "@/interfaces/interfaces";
 import styles from "../../styles/PaymentsPage/PaymentsPage.module.scss";
+import TableRowPayments from "@/components/PaymentsPage/TableRowPayments";
 
 const Card: React.FC<CardProps> = ({
   title,
@@ -64,13 +64,13 @@ export default function Payments() {
             <p className="text-center">Сумма (руб)</p>
             <p className="text-center">Дата</p>
           </div>
-          <TableRow
+          <TableRowPayments
             type="Списание"
             description="Оплата работы AI"
             amount={amount}
             date="16.01.2025"
           />
-          <TableRow
+          <TableRowPayments
             type="Пополнение"
             description="Пополнение баланса"
             amount={amount2}
