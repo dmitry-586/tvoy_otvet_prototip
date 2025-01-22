@@ -10,16 +10,16 @@
   },
   "dependencies": {
     "@react-pdf/renderer": "^4.1.5",
-    "antd": "^5.22.2",
+    "antd": "^5.23.2",
     "axios": "^1.7.7",
     "classnames": "^2.5.1",
     "clsx": "^2.1.1",
     "framer-motion": "^11.11.8",
     "next": "15.1.5",
     "npm": "^11.0.0",
-    "react": "19.0.0",
+    "react": "^19.0.0",
     "react-charts": "^3.0.0-beta.57",
-    "react-dom": "19.0.0",
+    "react-dom": "^19.0.0",
     "react-resizable": "^3.0.5",
     "recharts": "^2.13.0",
     "sass": "^1.80.6",
@@ -27,6 +27,7 @@
     "sharp": "^0.33.5"
   },
   "devDependencies": {
+    "@ant-design/v5-patch-for-react-19": "^1.0.3",
     "@types/node": "^22.9.0",
     "@types/react": "19.0.7",
     "@types/react-dom": "19.0.3",
